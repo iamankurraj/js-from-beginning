@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM-2</title>
+    <style>
+        body{
+            background-color: #2f2f2f;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body >
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    
+</body>
+<script>
+    let parent = document.querySelector('.parent');
+    // console.log(parent)
+    // console.log(parent.children)
+
+
+    for (let i = 0; i < parent.children.length; i++){
+        console.log(parent.children[i].innerHTML);
+    }
+
+    let dayOne = document.querySelector('.day');
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)                           //gives next element to first element in div 
+    // console.log(dayOne.nextElementSibling.nextElementSibling)       //this gives next element to previous elemnt
+
+    console.log("NODES:", parent.childNodes)
+
+
+
+
+
+
+
+
+
+    // for(let i=0; i<parent.children.length; i++){
+    //     let day = parent.children[i];
+    //     day.addEventListener('click', function(){
+    //         day.style.backgroundColor = 'yellow';
+    //         day.style.color = 'black';
+    //     });
+    // }
+
+</script>
+</html>
