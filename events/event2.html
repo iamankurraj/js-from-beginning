@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>async</title>
+</head>
+<body>
+    <h1>async</h1>
+    <button id="stop">button</button>
+</body>
+<script>
+    const sayAnkur = function(){
+        console.log('display after 2 second');    
+    }
+
+    // setTimeout(function() {
+        // console.log('ankur');            
+    // }, 2000);    
+    //this function is called HANDLER. it is basically a function without name
+    
+    
+    setTimeout(sayAnkur, 2000);           //dont execute "sayAnkur();"
+    const changeHeader = function() {
+    document.querySelector('h1').innerHTML = "changes after 2 second of reload";
+    }
+    const changeMe = setTimeout(changeHeader,3000);
+
+    document.querySelector('#stop').addEventListener(
+        'click',function(){
+            clearTimeout(changeMe)
+            console.log('stop button clicked');
+        }
+    )
+    
+                                       
+</script>
+</html>
